@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 
 export const metadata: Metadata = {
   title: "Eric Sia",
-  description: "This is a Portfolio for a full stack developer by Eric Sia",
+  description: "This is a Portfolio for a full stack developer by Eric",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 

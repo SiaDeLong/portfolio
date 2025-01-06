@@ -2,7 +2,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>experience</div>
+    <div className='bg-stone-800 w-screen h-screen'>
+      test
+    </div>
   )
 }
 

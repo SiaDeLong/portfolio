@@ -13,13 +13,13 @@ interface WordProps {
 
 const LanguageCloud = () => {
 
-    const radius = 20
-    const languages = ["Python", "Java", "JavaScript", "TypeScript", "C#", "Ruby", "Go", "Rust", "Swift", "Kotlin"];
+    const radius = 18
+    const languages = ["Python", "Java", "JavaScript", "TypeScript", "C#", "Kotlin", "SQL", "Git", "Angular.Js", "React.Js", "Next.Js", "Vue.Js", "R", "C++"];
     const groupRef = useRef<THREE.Group | null>(null);
 
     const Word = ({ children, ...props }: WordProps) => {
         const color = new THREE.Color()
-        const fontProps = { font: '/Inter-Bold.woff', fontSize: 2.5, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
+        const fontProps = { font: '/Inter-Bold.woff', fontSize: 2, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
         const ref = useRef<THREE.Mesh | null>(null)
         const [hovered, setHovered] = useState(false)
 
@@ -43,7 +43,7 @@ const LanguageCloud = () => {
             if (ref.current) {
                 const material = ref.current.material as THREE.MeshStandardMaterial;
                 if (material) {
-                    material.color.lerp(color.set(hovered ? '#fa2720' : 'white'), 0.1)
+                    material.color.lerp(color.set(hovered ? '#FFFFFF' : '#c4c4c4'), 0.1)
                 }
             }
         })
@@ -76,8 +76,8 @@ const LanguageCloud = () => {
 
         useFrame(() => {
             if (groupRef.current) {
-                groupRef.current.rotation.y += 0.008;
-                groupRef.current.rotation.z += 0.005;
+                groupRef.current.rotation.y += 0.003;
+                groupRef.current.rotation.z += 0.001;
             }
         });
 
@@ -85,7 +85,7 @@ const LanguageCloud = () => {
     }
 
     return (
-        <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
+        <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 20], fov: 90 }}>
             <fog attach="fog" args={['#202025', 0, 80]} />
             <Suspense fallback={null}>
                 <group ref={groupRef} rotation={[10, 10.5, 10]}>
