@@ -8,6 +8,7 @@ import { TrackballControls } from '@react-three/drei'
 import * as THREE from 'three';
 
 const Earth = () => {
+    
     // // Load the Earth texture (make sure to use a valid texture URL)
     const texture = useLoader(TextureLoader, '/earth.png')
 
@@ -33,11 +34,8 @@ const Earth = () => {
         </mesh>
     }
 
-    // Rotate the Earth on the X-axis each frame
-
-
     return (
-        <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
+        <Canvas className='z-0' camera={{ position: [0, 0, 10], fov: 75 }}>
             <Suspense fallback={null}>
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[5, 5, 5]} />

@@ -17,7 +17,9 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
         <NavBar />
-        {children}
+        <div className="bg-stone-800 h-screen">
+          {children}
+        </div>
       </body>
     </html>
   );
