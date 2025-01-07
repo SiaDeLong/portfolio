@@ -9,7 +9,7 @@ export const experiences = [
         year: "2024 - present",
         description: [
             "Take lead to innovate the company techstack, focusing on latest Java Spring Boot and React.",
-        ]
+        ],
     },
     {
         theme: "bg-white",
@@ -20,6 +20,6 @@ export const experiences = [
         description: [
             "Primarily interact with Java Spring Boot for backend development with the involvement of AWS services and Docker. Also handled frontend development, working with technologies including React, Angular, React Native, Vue, and Progressive Web Apps (PWA).",
             "Project Involved: Smart Traveller(CMS), Admin Portal, Merchant POS Machine App"
-        ]
+        ],
     }
 ]

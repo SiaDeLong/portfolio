@@ -15,9 +15,17 @@ const page = () => {
           animate={{ opacity: 100, translateY: 0 }}
           transition={{ duration: (index + 1) * 0.75 }}
         >
-          <div className={`group-hover:right-full top-0 right-0 absolute flex justify-center items-center ${exp.theme} rounded-lg w-full h-full transition-all duration-300`}>
-            {exp.logo}
-          </div>
+          <motion.div
+            className={`w-full absolute top-0 right-0 ${exp.theme} rounded-lg w-full h-full`}
+            initial={{ right: "100%" }}
+            animate={{ right: 0 }}
+            transition={{ duration: (index + 1) * 0.25 }}
+            whileHover={{ backgroundColor: "transparent" }}
+          >
+            <div className={`group-hover:right-full top-0 right-0 absolute flex justify-center items-center ${exp.theme} rounded-lg w-full h-full transition-all duration-300`}>
+              {exp.logo}
+            </div>
+          </motion.div>
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-1">
               <h1 className='font-medium text-2xl'>{exp.company}<span className='bg-white ml-2 px-2 rounded-md text-stone-700'>{exp.position}</span></h1>

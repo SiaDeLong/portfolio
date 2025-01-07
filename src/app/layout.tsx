@@ -20,6 +20,9 @@ export default function RootLayout({
         <div className="bg-stone-800 h-screen">
           {children}
         </div>
+        <div className="bottom-0 left-0 fixed w-screen">
+          <h1 className="text-right mr-48 font-light text-[#e3e3e3] text-xs">Eric © 2024</h1>
+        </div>
       </body>
     </html>
   );

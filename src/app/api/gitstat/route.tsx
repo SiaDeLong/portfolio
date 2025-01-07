@@ -18,6 +18,5 @@ export async function GET() {
 
   const data: GitHubProfile = await response.json() as GitHubProfile;
 
-  console.log(data)
   return NextResponse.json(data);
 }
